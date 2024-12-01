@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5; /* Gris clair */
+    color: #333; /* Gris foncé */
+    font-family: Arial, sans-serif;
+}
+
+.crud {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff; /* Blanc */
+    border: 1px solid #ddd; /* Bordure gris clair */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.head h2 {
+    font-size: 1.8rem;
+    color: #333; /* Gris foncé */
+}
+
+.head p {
+    font-size: 0.9rem;
+    color: #666; /* Gris moyen */
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: 1px solid #ccc; /* Gris clair */
+    background: #f9f9f9; /* Blanc cassé */
+    color: #333; /* Gris foncé */
+    margin: 8px 0;
+    border-radius: 5px;
+    padding: 8px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff; /* Bleu simple */
+}
+
+.price {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.price input {
+    flex: 1;
+    min-width: 120px;
+}
+
+#total {
+    background: #007bff; /* Bleu simple */
+    color: #fff; /* Blanc */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#total::before {
+    content: 'Total: ';
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #28a745; /* Vert simple */
+    color: #fff; /* Blanc */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838; /* Vert légèrement plus foncé */
+}
+
+.btnSearch {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.btnSearch button {
+    flex: 1;
+    min-width: 120px;
+    background: #007bff; /* Bleu simple */
+    color: #fff; /* Blanc */
+}
+
+.btnSearch button:hover {
+    background: #0056b3; /* Bleu légèrement plus foncé */
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: #fff; /* Blanc */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th {
+    text-transform: uppercase;
+    background: #007bff; /* Bleu simple */
+    color: #fff; /* Blanc */
+    padding: 12px;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Gris clair */
+}
+
+#deleteAll {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#deleteAll button {
+    background: #dc3545; /* Rouge simple */
+    color: #fff; /* Blanc */
+}
+
+#deleteAll button:hover {
+    background: #c82333; /* Rouge légèrement plus foncé */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .crud {
+        width: 90%;
+    }
+
+    .price {
+        flex-direction: column;
+    }
+
+    .btnSearch {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    table th,
+    table td {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .crud {
+        width: 95%;
+    }
+
+    .head h2 {
+        font-size: 1.5rem;
+    }
+
+    .head p {
+        font-size: 0.9rem;
+    }
+
+    input {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    #total {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    table th,
+    table td {
+        font-size: 0.8rem;
+    }
+}
